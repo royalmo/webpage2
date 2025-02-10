@@ -6,3 +6,8 @@ it was done using bootstrap studio.
 
 This is a static no-build website using [simple.css](https://simplecss.org/).
 Hosted at htz.ericroy.net using a simple nginx setup.
+
+## Deploy
+
+Use the nginx templates and `certbot --nginx -d www.ericroy.net` to
+deploy with HTTPS. Adapt to the other domain too.

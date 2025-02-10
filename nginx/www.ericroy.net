@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name www.ericroy.net;
+
+    location / {
+        return 301 https://ericroy.net$request_uri;
+    }
+}

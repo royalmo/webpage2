@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name ericroy.net;
+
+    root /var/www/static/ericroy.net/public;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    access_log /var/log/nginx/ericroy.net_access.log;
+    error_log /var/log/nginx/ericroy.net_error.log;
+}
