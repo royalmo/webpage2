@@ -1,8 +1,9 @@
 server {
     listen 80;
+    listen [::]:80;
     server_name ericroy.net;
 
-    root /var/www/static/ericroy.net/public;
+    root /var/www/static/ericroy.net/webpage2/public;
     index index.html;
 
     location / {
