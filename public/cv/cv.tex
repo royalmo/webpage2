@@ -1,0 +1,146 @@
+\documentclass[a4paper]{report}
+
+% adapted from https://github.com/gboeing/cv?tab=readme-ov-file
+
+% Essential packages
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabto}
+\usepackage{xcolor}
+
+\usepackage{multicol}
+
+% Typography
+\usepackage{stix2}
+\usepackage{helvet}
+
+% Custom commands and environments
+\newcommand{\listtabwidth}{1.7cm}
+\newcommand{\listitemspace}{0.25em}
+\newcommand{\namefont}[1]{{\Huge{#1}}}
+
+% Color definitions
+\definecolor{telecom}{RGB}{151, 4, 12}
+
+% Hyperref (should be loaded last)
+\usepackage[colorlinks=false,allcolors=telecom]{hyperref}
+
+% Typography settings
+% \SetTracking{encoding=*, family=\sfdefault}{30}
+\titleformat{\section}{\sffamily\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+\titleformat{\subsection}{\lsstyle\sffamily\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 4pt}
+
+% Custom list environments
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+\begin{document}
+
+    \raggedright{}
+
+    % display your name as the document title
+    \namefont{Eric Roy-Almonacid}
+
+    % affiliation and contact info blocks
+    \vspace{1.7em}
+    \begin{minipage}[t]{0.595\textwidth}
+        % current primary affiliation, left-aligned
+        Teacher and full-stack dev\\
+        \href{https://github.com/royalmo}{github.com/royalmo}%\\
+	    %\href{https://orcid.org/0009-0006-1486-3482}{orcid.org/0009-0006-1486-3482}
+    \end{minipage}
+    \begin{minipage}[t]{0.395\textwidth}
+        % contact info details, right-aligned
+        \flushright{}
+        \href{mailto:eric@ericroy.net}{eric@ericroy.net} / \href{mailto:eric.roy@upc.edu}{eric.roy@upc.edu} \\
+        \href{https://ericroy.net}{ericroy.net}
+    \end{minipage}
+
+    \vspace{1.7em}
+    
+I am currently a masters student doing research on game theory for optimization techniques for games with ordered preferences. 
+I concurrently work at Codelearn as a full-stack developer, while also teaching some undergraduate courses at Universitat Politècnica de Catalunya (UPC).
+I seek to learn more about robotics to apply my current research work in game theory for multiagent systems to the physical world.
+
+\vspace{-1em}
+\section*{Education}
+
+\begin{tablist}
+\item[2024--] \tab{}MSc in Machine Learning \& Cybersecurity, Universitat Politècnica de Catalunya (UPC)
+\item[2020--24] \tab{}BSc in ICT Systems Engineering, Universitat Politècnica de Catalunya (UPC)
+\end{tablist}
+
+\vspace{-1em}
+\section*{Experience}
+
+    \begin{tablist}
+      \item[2024--] \tab{}Universitat Politècnica de Catalunya (UPC)\\ Teacher\\\smallskip
+        Taught courses on programmable devices (assembler) and applications and services on the internet to BSc students.
+\vspace{0.5em}
+      \item[] \tab{}Codelearn S.L.\vspace{-.25em}
+        \item[2021--] \tab{}Full-stack developer\\\smallskip
+        Maintaining and enhancing a gamified web platform where kids can learn coding and computational thinking skills. One of the key tasks consists of integrating external games or platforms (both physical and online) to our infraestructure.
+       \item[2020--21] \tab{}Programming teacher\\\smallskip
+       Introduced kids into computational thinking. This includes programming, robotics, electronics and video games, using both educative and state-of-the-art tools.
+    \end{tablist}
+\nocite{*}
+
+\vspace{-1em}
+\section*{Invited Talks}
+
+\begin{tablist}
+    % TODO REVIEW TITLE
+    \item[2025] \tab{}Games of ordered preferences - Iowa State University
+\end{tablist}
+
+\vspace{-1em}
+\section*{Open source contributions}
+\begin{itemize}
+    \item \href{https://github.com/royalmo/skulpt}{Skulpt}, a Javascript implementation of the Python programming language. I improved the \textit{turtle} library.
+    \item Translations of many projects, e.g. \href{https://github.com/starchow/rails_admin-i18n}{Rails-Admin}, \href{https://github.com/bfcapell/translate}{Rails-Translate}.
+    \item Own projects. Some examples: \href{https://gyroscreen.ericroy.net/}{BSc thesis}, \href{https://github.com/royalmo/docker-networks}{tutorials \& walkthroughs}, \href{https://github.com/royalmo/openvpn-manager}{wrappers}, \href{https://github.com/royalmo/itic-copilot}{extensions}, \href{https://umbages.cat}{websites}.
+    \item Minor contributions to: \href{https://github.com/home-assistant/developers.home-assistant}{HomeAssistant}, \href{https://github.com/royalmo/pyrandr}{Pyrandr}, \href{https://github.com/analogdevicesinc/libiio/pull/1159}{lib\_iio}, \href{https://github.com/bfcapell/ubiquo/compare/master...royalmo:ubiquo:add_dynamically_ubiquo_assets_2024_11_28}{Ubiquo}.
+\end{itemize}
+
+% \section*{Miscellaneous}
+% \begin{itemize}
+%     \item Technologies: Rails (Ruby), Python, Julia, Web (HTML/JS/CSS), AVR (Arduino)
+%     \item Languages: Catalan, Spanish, French, English, German, Italian
+% \end{itemize}
+
+\vspace{-1em}
+\section*{References}
+
+\vspace{-1em}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item Georgios Bakirtzis, Assistant Professor\\ 
+ Télécom Paris \& Institut Polytechnique de Paris\\ bakirtzis@telecom-paris.fr\\
+ Relationship: MSc thesis advisor
+
+\item David Fridovich-Keil, Assistant Professor\\The University of Texas at Austin\\dfk@utexas.edu\\
+Relationship: Research collaborator
+\end{itemize}
+\end{multicols}
+
+\end{document}
